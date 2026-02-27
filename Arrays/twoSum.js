@@ -13,19 +13,18 @@ function twoSum(nums, k) {
 }
 console.log(twoSum([2, 7, 11, 15], 9));
 
-
 // optimal
-function twooSum(nums, target) {
-  const map = new Map(); 
-
+function twooSum(nums, k) {
+  let map = new Map();
   for (let i = 0; i < nums.length; i++) {
-    const complement = target - nums[i]; 
-
-    if (map.has(complement)) {
-      return [map.get(complement), i]; 
+    const compliment = k - nums[i];
+    if (map.has(compliment)) {
+      return [map.get(compliment), i];
     }
-    map.set(nums[i], i); 
+    map.set(nums[i], i);
   }
 }
 
 console.log(twooSum([2, 7, 11, 15], 9));
+// Time: O(n) — ek baar hi loop
+// Space: O(n) — map mein store ho raha hai
