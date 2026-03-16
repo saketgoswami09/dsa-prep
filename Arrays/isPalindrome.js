@@ -1,5 +1,5 @@
 function isPalindrome(s) {
-let left = 0;
+    let left = 0;
     let right = s.length - 1;
     const isAlphaNum = /[a-z0-9]/i;
 
